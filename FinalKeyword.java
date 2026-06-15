@@ -1,3 +1,4 @@
+package Foundation;
 class Main {
     
     //When you do not want a variable's value to change, use the final keyword.//
