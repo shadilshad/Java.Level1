@@ -1,0 +1,65 @@
+| Problem    | What you do                      |
+| ---------- | -------------------------------- |
+| Reverse    | build new number (`*10 + digit`) |
+| Sum        | add (`sum + digit`)              |
+| Count      | just count (`count++`)           |
+| Palindrome | reverse + compare                |
+
+eg:
+
+1. Reverse Number:
+
+int num = 123;
+int reverse = 0;
+
+while (num != 0) {
+    int digit = num % 10;
+    reverse = reverse * 10 + digit;
+    num = num / 10;
+}
+
+System.out.println("Reverse: " + reverse);
+
+
+2. Sum of Digits → 6
+
+int num = 123;
+int sum = 0;
+
+while (num != 0) {
+    int digit = num % 10;
+    sum = sum + digit;
+    num = num / 10;
+}
+
+System.out.println("Sum: " + sum);
+
+3. Count Digits → 3
+
+int num = 123;
+int count = 0;
+
+while (num != 0) {
+    num = num / 10;
+    count++;
+}
+
+System.out.println("Count: " + count);
+
+4. Palindrome Check
+
+int num = 123;
+int original = num;
+int reverse = 0;
+
+while (num != 0) {
+    int digit = num % 10;
+    reverse = reverse * 10 + digit;
+    num = num / 10;
+}
+
+if (original == reverse) {
+    System.out.println("Palindrome");
+} else {
+    System.out.println("Not Palindrome");
+}
