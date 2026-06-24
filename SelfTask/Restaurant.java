@@ -6,13 +6,16 @@ class Menu {
     int price;
     boolean isHeading;
 
-    static String Website = "www.website.com";
+    static String website = "www.website.com";
+    static String phone = "+1234567890";
 
+    // Heading
     Menu(String n) {
         name = n;
         isHeading = true;
     }
 
+    // Item
     Menu(String n, int p) {
         name = n;
         price = p;
@@ -27,10 +30,11 @@ class Menu {
         }
     }
 
-    static void details() {
-        System.out.println("\n-- FREE DELIVERY --");
-        System.out.println("+1234567890");
-        System.out.println(Website);
+    static void showDetails() {
+        System.out.println("\n--- DELIVERY DETAILS ---");
+        System.out.println("Free Delivery Available");
+        System.out.println("Contact: " + phone);
+        System.out.println("Website: " + website);
     }
 }
 
@@ -38,7 +42,6 @@ public class Restaurant {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        boolean running = true;
         int total = 0;
 
         Menu[] mainCourse = {
@@ -68,14 +71,18 @@ public class Restaurant {
             new Menu("5: Smoothie", 160)
         };
 
-        do {
-            System.out.println("\nChoose Category:");
+        while (true) {
+            System.out.println("\n=== RESTAURANT MENU ===");
             System.out.println("1 - MAIN COURSE");
             System.out.println("2 - APPETIZERS");
             System.out.println("3 - DRINKS");
+            System.out.println("0 - EXIT");
 
             int choice = sc.nextInt();
-            Menu[] selectedMenu = null;
+
+            if (choice == 0) break;
+
+            Menu[] selectedMenu;
 
             switch (choice) {
                 case 1:
@@ -92,13 +99,13 @@ public class Restaurant {
                     continue;
             }
 
+            // Show menu
             for (Menu item : selectedMenu) {
                 item.display();
             }
 
-            Menu.details();
-
-            System.out.println("\nEnter item number (0 to stop ordering):");
+            System.out.println("\nEnter item number to order");
+            System.out.println("0 - Back to menu");
 
             while (true) {
                 int order = sc.nextInt();
@@ -107,25 +114,21 @@ public class Restaurant {
 
                 if (order >= 1 && order <= 5) {
                     total += selectedMenu[order].price;
-                    System.out.println(" Added: " + selectedMenu[order].name);
+                    System.out.println("Added: " + selectedMenu[order].name);
+                    System.out.println("Current Total: " + total + " Rs");
                 } else {
-                    System.out.println(" Invalid item");
+                    System.out.println("Invalid item");
                 }
             }
+        }
 
-            System.out.println("\nCurrent Total: " + total + " Rs");
+        // FINAL BILL + DETAILS
+        System.out.println("\n===== FINAL BILL =====");
+        System.out.println("Total Amount: " + total + " Rs");
 
-            System.out.println("\nDo you want to continue? (yes/no)");
-            String again = sc.next();
+        Menu.showDetails();
 
-            if (again.equalsIgnoreCase("no")) {
-                running = false;
-            }
-
-        } while (running);
-
-        System.out.println("\n Final Bill: " + total + " Rs");
-        System.out.println("Thank you for visiting!");
+        System.out.println("\nThank you for visiting!");
 
         sc.close();
     }
