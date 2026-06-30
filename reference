@@ -1,0 +1,64 @@
+Print whether a number is Even or Odd.
+Find the largest of three numbers.
+Check whether a year is a leap year.
+Reverse a number (e.g., 12345 → 54321).
+Check whether a number is a palindrome (e.g., 121).
+Find the sum of digits of a number.
+Count the number of digits in a number.
+Check whether a number is prime.
+Print all prime numbers from 1 to N.
+Print the Fibonacci series up to N terms.
+
+
+Level 2 – Loops & Patterns
+Print a right-angled triangle using *.
+Print an inverted triangle.
+Print a pyramid.
+Print a diamond.
+Print Floyd's triangle.
+Print Pascal's triangle (Challenge).
+Print multiplication tables from 1 to 10.
+Calculate factorial.
+Find GCD and LCM of two numbers.
+Check whether a number is an Armstrong number.
+
+
+
+Level 3 – Arrays
+Find the largest element.
+Find the smallest element.
+Find the second largest element.
+Reverse an array.
+Count even and odd numbers.
+Find the sum and average.
+Search for an element (Linear Search).
+Remove duplicate elements.
+Rotate an array to the left by one position.
+Rotate an array to the right by k positions.
+
+
+
+Level 4 – Strings
+Reverse a string.
+Check palindrome.
+Count vowels and consonants.
+Count the frequency of each character.
+Remove all spaces.
+Check whether two strings are anagrams.
+Find the first non-repeating character.
+Remove duplicate characters.
+Capitalize the first letter of every word.
+Find the longest word in a sentence.
+
+
+Level 5 – Core Java Thinking
+Design a Student class.
+Design a BankAccount class with deposit and withdrawal methods.
+Create an Employee class and calculate salary.
+Demonstrate method overloading.
+Demonstrate method overriding.
+Create an abstract Shape class and implement Circle and Rectangle.
+Create an interface for payments and implement UPI, Card, and Cash.
+Sort a list of students by marks.
+Handle multiple exceptions in one program.
+Read from one file and write to another.
